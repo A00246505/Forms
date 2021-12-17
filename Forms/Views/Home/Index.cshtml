@@ -1,0 +1,42 @@
+﻿@model FormModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <tr class="form-group">
+
+        @using(Html.BeginForm())
+        {
+            <table align="center">
+                <tr >
+                    <td align="center">
+                        @Html.Label("Enter date")
+                        @Html.TextBox("date")
+                    </td>
+                </tr>
+
+                <tr >
+                    <td align="center">
+                        @Html.Label("Number of days")
+                        @Html.TextBox("days")
+                    </td>
+                </tr>
+
+                 <tr >
+                    <td align="center">
+                        <input type="submit" value="Submit" class="btn-secondary"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @ViewBag.Output
+                    </td>
+                </tr>
+            </table>
+        }
+    </tr>
+</div>
